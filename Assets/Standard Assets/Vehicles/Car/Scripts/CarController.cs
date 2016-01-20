@@ -21,6 +21,9 @@ namespace UnityStandardAssets.Vehicles.Car
 
 		public bool planeMode = false;
 
+		public int carWeight = 10000;
+		public int planeWeight = 100;
+
 		[SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
 		[SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
 		[SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
@@ -60,6 +63,8 @@ namespace UnityStandardAssets.Vehicles.Car
 		[SerializeField] private float m_AirBrakesEffect = 3f;        // How much the air brakes effect the drag.
 		[SerializeField] private float m_ThrottleChangeSpeed = 0.3f;  // The speed with which the throttle changes.
 		[SerializeField] private float m_DragIncreaseFactor = 0.001f; // how much drag should increase with speed.
+
+
 
 		public float Altitude { get; private set; }                     // The aeroplane's height above the ground.
 		public float Throttle { get; private set; }                     // The amount of throttle being used.
@@ -117,6 +122,12 @@ namespace UnityStandardAssets.Vehicles.Car
 			m_CurrentTorque = m_FullTorqueOverAllWheels - (m_TractionControl*m_FullTorqueOverAllWheels);
 			m_OriginalDrag = m_Rigidbody.drag;
 			m_OriginalAngularDrag = m_Rigidbody.angularDrag;
+
+			if (planeMode) {
+				m_Rigidbody.mass = planeWeight;
+			} else {
+				m_Rigidbody.mass = carWeight;
+			}
 		}
 
 
@@ -527,9 +538,9 @@ namespace UnityStandardAssets.Vehicles.Car
 			planeMode = !planeMode;
 
 			if (planeMode) {
-				m_Rigidbody.mass = 10;
+				m_Rigidbody.mass = planeWeight;
 			} else {
-				m_Rigidbody.mass = 1000;
+				m_Rigidbody.mass = carWeight;
 			}
 		}
 
