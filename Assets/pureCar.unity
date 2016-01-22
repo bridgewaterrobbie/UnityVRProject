@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62479c3465024b48b42983b1b2eeaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkidTrailPrefab: {fileID: 0}
+  SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 2}
   skidParticles: {fileID: 0}
 --- !u!146 &142022619
 WheelCollider:
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec1e45165d1f2544bff59f5a80db8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheel: {fileID: 0}
+  wheel: {fileID: 1833208681}
 --- !u!114 &224198722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459cec5b068041e44a60a6e3b6abb0eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carController: {fileID: 0}
+  carController: {fileID: 341300514}
 --- !u!23 &224198723
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -516,7 +516,7 @@ MonoBehaviour:
   clipMoveTime: 0.05
   returnTime: 0.4
   sphereCastRadius: 0.1
-  visualiseInEditor: 0
+  visualiseInEditor: 1
   closestDistance: 0.5
   dontClipTag: Player
 --- !u!114 &245685950
@@ -533,10 +533,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Target: {fileID: 0}
   m_AutoTargetPlayer: 1
-  m_UpdateType: 0
-  m_MoveSpeed: 1
-  m_TurnSpeed: 1.5
-  m_TurnSmoothing: 0.1
+  m_UpdateType: 1
+  m_MoveSpeed: 999
+  m_TurnSpeed: 10
+  m_TurnSmoothing: 0
   m_TiltMax: 75
   m_TiltMin: 45
   m_LockCursor: 0
@@ -620,7 +620,7 @@ Transform:
   - {fileID: 1531988458}
   - {fileID: 1085887373}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
 --- !u!1 &341300511
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,13 +654,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   engineSoundStyle: 1
-  lowAccelClip: {fileID: 0}
-  lowDecelClip: {fileID: 0}
-  highAccelClip: {fileID: 0}
-  highDecelClip: {fileID: 0}
-  pitchMultiplier: 1
+  lowAccelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
+  lowDecelClip: {fileID: 8300000, guid: c4d8928c75c21af43998193f0f038429, type: 3}
+  highAccelClip: {fileID: 8300000, guid: 03e3bd08a6e70684dbe299a3e185fdd2, type: 3}
+  highDecelClip: {fileID: 8300000, guid: 03bf91d88fce91c41995d27de63cc967, type: 3}
+  pitchMultiplier: 0.8
   lowPitchMin: 1
-  lowPitchMax: 6
+  lowPitchMax: 5
   highPitchMultiplier: 0.25
   maxRolloffDistance: 500
   dopplerLevel: 1
@@ -692,48 +692,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planeMode: 0
-  carWeight: 10000
+  carWeight: 1000
   planeWeight: 100
   m_CarDriveType: 2
   m_WheelColliders:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1814204556}
+  - {fileID: 1568360492}
+  - {fileID: 142022619}
+  - {fileID: 1129486036}
   m_WheelMeshes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1833208681}
+  - {fileID: 1920189618}
+  - {fileID: 1665333265}
+  - {fileID: 2001601113}
   m_WheelEffects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1814204555}
+  - {fileID: 1568360490}
+  - {fileID: 142022618}
+  - {fileID: 1129486034}
   m_CentreOfMassOffset: {x: 0, y: 0, z: 0}
-  m_MaximumSteerAngle: 0
-  m_SteerHelper: 0
-  m_TractionControl: 0
-  m_FullTorqueOverAllWheels: 0
-  m_ReverseTorque: 0
-  m_MaxHandbrakeTorque: 0
+  m_MaximumSteerAngle: 25
+  m_SteerHelper: 0.644
+  m_TractionControl: 1
+  m_FullTorqueOverAllWheels: 2500
+  m_ReverseTorque: 500
+  m_MaxHandbrakeTorque: 100000000
   m_Downforce: 100
   m_SpeedType: 0
-  m_Topspeed: 200
+  m_Topspeed: 150
   m_RevRangeBoundary: 1
-  m_SlipLimit: 0
-  m_BrakeTorque: 0
+  m_SlipLimit: 0.3
+  m_BrakeTorque: 20000
   m_MaxEnginePower: 40
   m_Lift: 0.002
-  m_ZeroLiftSpeed: 300
-  m_RollEffect: 1
-  m_PitchEffect: 1
+  m_ZeroLiftSpeed: 3000
+  m_RollEffect: 0.75
+  m_PitchEffect: 0.75
   m_YawEffect: 0.2
   m_BankedTurnEffect: 0.5
   m_AerodynamicEffect: 0.02
   m_AutoTurnPitch: 0.5
-  m_AutoRollLevel: 0.2
-  m_AutoPitchLevel: 0.2
+  m_AutoRollLevel: 0.1
+  m_AutoPitchLevel: 0.1
   m_AirBrakesEffect: 3
   m_ThrottleChangeSpeed: 0.3
   m_DragIncreaseFactor: 0.001
@@ -2463,7 +2463,7 @@ RectTransform:
   - {fileID: 1184224657}
   - {fileID: 647167904}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -2546,7 +2546,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camSwitchButton: {fileID: 0}
-  objects: []
+  objects:
+  - {fileID: 1756317532}
+  - {fileID: 245685947}
+  - {fileID: 1490359561}
 --- !u!1001 &473551828
 Prefab:
   m_ObjectHideFlags: 0
@@ -2597,69 +2600,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a2dd655bfef0f0849a2c33d8fb4a029c, type: 2}
   m_PrefabInternal: {fileID: 473551828}
---- !u!1001 &480011017
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.9653473
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.1740751
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-      propertyPath: m_Name
-      value: Deatheater Model 2 (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-  m_IsPrefabParent: 0
---- !u!1 &480011018 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 100000, guid: 0b79b484e2bf148949c8ed656a9334d0, type: 3}
-  m_PrefabInternal: {fileID: 480011017}
---- !u!114 &480011019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 480011018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff39c616e69a84e13a233df1b9f144f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 1.5
-  speed: 2
 --- !u!1 &482305131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,8 +2641,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e373d5f05ca4f4b8ee311c44f4d801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects: []
-  text: {fileID: 0}
+  objects:
+  - {fileID: 1756317532}
+  - {fileID: 245685947}
+  - {fileID: 1490359561}
+  text: {fileID: 1164681769}
 --- !u!1001 &581821179
 Prefab:
   m_ObjectHideFlags: 0
@@ -3197,7 +3140,7 @@ Transform:
   - {fileID: 2074889264}
   - {fileID: 1930313917}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1001 &789697494
 Prefab:
   m_ObjectHideFlags: 0
@@ -3486,20 +3429,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualizeFocus: 0
   focalLength: 10
-  focalSize: 0.05
-  aperture: 0.5
-  focalTransform: {fileID: 0}
-  maxBlurSize: 2
-  highResolution: 0
+  focalSize: 0.7
+  aperture: 16
+  focalTransform: {fileID: 332488660}
+  maxBlurSize: 1
+  highResolution: 1
   blurType: 0
-  blurSampleCount: 2
+  blurSampleCount: 0
   nearBlur: 0
-  foregroundOverlap: 1
-  dofHdrShader: {fileID: 0}
-  dx11BokehShader: {fileID: 0}
+  foregroundOverlap: 4
+  dofHdrShader: {fileID: 4800000, guid: acd613035ff3e455e8abf23fdc8c8c24, type: 3}
+  dx11BokehShader: {fileID: 4800000, guid: d8e82664aa8686642a424c88ab10164a, type: 3}
   dx11BokehThreshold: 0.5
   dx11SpawnHeuristic: 0.0875
-  dx11BokehTexture: {fileID: 0}
+  dx11BokehTexture: {fileID: 2800000, guid: a4cdca73d61814d33ac1587f6c163bca, type: 3}
   dx11BokehScale: 1.2
   dx11BokehIntensity: 2.5
 --- !u!81 &970763885
@@ -3572,17 +3515,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  intensity: 0.036
-  chromaticAberration: 0.2
-  axialAberration: 0.5
+  mode: 1
+  intensity: 0.25
+  chromaticAberration: 4
+  axialAberration: 2
   blur: 0
   blurSpread: 0.75
-  luminanceDependency: 0.25
-  blurDistance: 2.5
-  vignetteShader: {fileID: 0}
-  separableBlurShader: {fileID: 0}
-  chromAberrationShader: {fileID: 0}
+  luminanceDependency: 0.11
+  blurDistance: 1.5
+  vignetteShader: {fileID: 4800000, guid: 627943dc7a9a74286b70a4f694a0acd5, type: 3}
+  separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
+  chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
+    type: 3}
 --- !u!114 &970763890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3596,7 +3540,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BuildTargetGroup: 0
   m_Content: []
-  m_MonoBehaviours: []
+  m_MonoBehaviours:
+  - {fileID: 970763884}
+  - {fileID: 970763889}
   m_ChildrenOfThisObject: 0
 --- !u!1 &1009975379
 GameObject:
@@ -3983,7 +3929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62479c3465024b48b42983b1b2eeaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkidTrailPrefab: {fileID: 0}
+  SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 2}
   skidParticles: {fileID: 0}
 --- !u!82 &1129486035
 AudioSource:
@@ -4246,7 +4192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fffafd711dc1dbc478a49705cfe1ce3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 0}
+  car: {fileID: 341300514}
 --- !u!23 &1195341082
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4310,7 +4256,7 @@ Transform:
   - {fileID: 2105245632}
   - {fileID: 797292488}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
 --- !u!1001 &1231636494
 Prefab:
   m_ObjectHideFlags: 0
@@ -4320,7 +4266,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400100, guid: f5a9bd478ca094495a4520e37f57420d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.43
+      value: 0.6808877
       objectReference: {fileID: 0}
     - target: {fileID: 400100, guid: f5a9bd478ca094495a4520e37f57420d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4328,7 +4274,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400100, guid: f5a9bd478ca094495a4520e37f57420d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.39
+      value: -8.618341
       objectReference: {fileID: 0}
     - target: {fileID: 400100, guid: f5a9bd478ca094495a4520e37f57420d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4370,10 +4316,6 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 9bd66d93c00774c3da01173b0e771770, type: 2}
-    - target: {fileID: 100100, guid: f5a9bd478ca094495a4520e37f57420d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f5a9bd478ca094495a4520e37f57420d, type: 3}
   m_IsPrefabParent: 0
@@ -4408,11 +4350,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  moveSpeed: 10
+  moveSpeed: 3
   rotationSpeed: 3
-  flying: 1
+  flying: 0
   minDistanceFollow: 0.5
-  maxDistanceFollow: 100
+  maxDistanceFollow: 1000000
   myTransform: {fileID: 0}
 --- !u!65 &1231636498
 BoxCollider:
@@ -4685,7 +4627,7 @@ Transform:
   - {fileID: 1574584348}
   - {fileID: 2134215671}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1318287170
 GameObject:
   m_ObjectHideFlags: 0
@@ -4949,8 +4891,8 @@ MonoBehaviour:
   m_Target: {fileID: 0}
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
-  m_RotationRange: {x: 0, y: 0}
-  m_FollowSpeed: 1
+  m_RotationRange: {x: 90, y: 360}
+  m_FollowSpeed: 0.1
 --- !u!81 &1490359566
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5097,7 +5039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62479c3465024b48b42983b1b2eeaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkidTrailPrefab: {fileID: 0}
+  SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 2}
   skidParticles: {fileID: 0}
 --- !u!82 &1568360491
 AudioSource:
@@ -5729,12 +5671,12 @@ MonoBehaviour:
   m_Target: {fileID: 332488660}
   m_AutoTargetPlayer: 1
   m_UpdateType: 0
-  m_MoveSpeed: 3
-  m_TurnSpeed: 1
-  m_RollSpeed: 0.2
+  m_MoveSpeed: 15
+  m_TurnSpeed: 15
+  m_RollSpeed: 3
   m_FollowVelocity: 0
   m_FollowTilt: 1
-  m_SpinTurnLimit: 90
+  m_SpinTurnLimit: 180
   m_TargetVelocityLowerLimit: 4
   m_SmoothTurnTime: 0.2
 --- !u!114 &1756317534
@@ -5752,7 +5694,7 @@ MonoBehaviour:
   clipMoveTime: 0.05
   returnTime: 0.4
   sphereCastRadius: 0.1
-  visualiseInEditor: 0
+  visualiseInEditor: 1
   closestDistance: 0.5
   dontClipTag: Player
 --- !u!54 &1756317535
@@ -5827,7 +5769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 459cec5b068041e44a60a6e3b6abb0eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carController: {fileID: 0}
+  carController: {fileID: 341300514}
 --- !u!114 &1770432310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5840,7 +5782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ec1e45165d1f2544bff59f5a80db8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheel: {fileID: 0}
+  wheel: {fileID: 1920189618}
 --- !u!23 &1770432311
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5918,7 +5860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62479c3465024b48b42983b1b2eeaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkidTrailPrefab: {fileID: 0}
+  SkidTrailPrefab: {fileID: 400000, guid: 4b6aa99de5d21424eab6ae279f31475b, type: 2}
   skidParticles: {fileID: 0}
 --- !u!146 &1814204556
 WheelCollider:
@@ -6657,7 +6599,7 @@ Transform:
   - {fileID: 721703608}
   - {fileID: 929565522}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &1942186637
 GameObject:
   m_ObjectHideFlags: 0
