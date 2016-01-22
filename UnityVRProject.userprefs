@@ -1,8 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PB_Spider/readme.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Scripts/Floating.cs">
     <Files>
-      <File FileName="Assets/PB_Spider/readme.txt" Line="1" Column="1" />
+      <File FileName="Assets/Standard Assets/Scripts/Floating.cs" Line="18" Column="1" />
+      <File FileName="Assets/PB_Spider/readme.txt" Line="5" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
